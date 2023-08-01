@@ -1,4 +1,6 @@
 ﻿using System;
+using RetornoDaFuncao;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Program
 {
@@ -20,11 +22,14 @@ namespace Program
             string resultado = Operacao.Escolha(operacao, numero, numero2);
             Console.WriteLine(resultado);
 
-            int num = OperacaoBasica.Resto((int)numero, (int)numero2);
-            Console.WriteLine(num);
+            /*int num = OperacaoBasica.Resto((int)numero, (int)numero2);
+            Console.WriteLine(num);*/
+
+            string PotenciacaoOrRaiz = OutrasFunções.number(0, 0, "");
+
+            Console.WriteLine(PotenciacaoOrRaiz);
 
         }
-
     }
 
     class Operacao
