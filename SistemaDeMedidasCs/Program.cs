@@ -25,7 +25,7 @@ namespace Program
             /*int num = OperacaoBasica.Resto((int)numero, (int)numero2);
             Console.WriteLine(num);*/
 
-            string PotenciacaoOrRaiz = OutrasFunções.number(0, 0, "");
+            string PotenciacaoOrRaiz = OutrasFunções.number(0, 0, "", 0, ""); // Parametro obrigatório por falta de entrade de dados ReadLine()
 
             Console.WriteLine(PotenciacaoOrRaiz);
 

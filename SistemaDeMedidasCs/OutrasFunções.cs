@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SistemaDeMedidasCs;
 
 namespace RetornoDaFuncao
 {
     class OutrasFunções
     {
 
-        public static string number(double numero2, int x, string escolha)
+        public static string number(double numero2, int x, string escolha, double numero5, string opcao)
         {
 
-            Console.WriteLine("Realizar a raiz quadrada = 1 ou 0 para cálcular a potenciação");
+            Console.WriteLine("Realizar a raiz quadrada = 1 ou 0 para cálcular a potenciação ou para converter valores de medidas");
             escolha = Console.ReadLine();
   
             if(escolha == "1")
             {
-
 
                 Console.WriteLine("Passe um número para a raiz: ");
                 numero2 = Convert.ToDouble(Console.ReadLine());
@@ -37,6 +37,16 @@ namespace RetornoDaFuncao
                 string Potenciacao2 = Potenciacao(numero2, x).ToString();
                 return Potenciacao2;
 
+            }else if (escolha == "2")
+            {
+                Console.WriteLine("Valor para conversão de medidas: ");
+                numero5 = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Escolha a opção de Conversão");
+                opcao = Console.ReadLine();
+
+                double SistemaDeMedidasCs = SistemaDeMedidas.SistemaMedidas(opcao, numero5);
+                return SistemaDeMedidasCs.ToString();
             }
             else
             {
