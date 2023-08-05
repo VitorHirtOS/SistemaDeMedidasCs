@@ -48,7 +48,7 @@ namespace RetornoDaFuncao
                 Console.WriteLine("Escolha a opção de Conversão para determinado medida");
                 opcao2 = Console.ReadLine();
 
-                double SistemaDeMedidasCs = SistemaDeMedidas.SistemaMedidas(opcao, numero5, opcao2);
+                double SistemaDeMedidasCs = SistemaDeMedidas.SistemaMedidas(opcao, opcao2, numero5);
                 return SistemaDeMedidasCs.ToString();
             }
             else
