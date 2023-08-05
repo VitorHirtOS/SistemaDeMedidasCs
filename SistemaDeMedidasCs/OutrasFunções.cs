@@ -10,7 +10,7 @@ namespace RetornoDaFuncao
     class OutrasFunções
     {
 
-        public static string number(double numero2, int x, string escolha, double numero5, string opcao)
+        public static string number(double numero2, int x, string escolha, double numero5, string opcao, string opcao2)
         {
 
             Console.WriteLine("Realizar a raiz quadrada = 1 ou 0 para cálcular a potenciação ou para converter valores de medidas");
@@ -45,7 +45,10 @@ namespace RetornoDaFuncao
                 Console.WriteLine("Escolha a opção de Conversão");
                 opcao = Console.ReadLine();
 
-                double SistemaDeMedidasCs = SistemaDeMedidas.SistemaMedidas(opcao, numero5);
+                Console.WriteLine("Escolha a opção de Conversão para determinado medida");
+                opcao2 = Console.ReadLine();
+
+                double SistemaDeMedidasCs = SistemaDeMedidas.SistemaMedidas(opcao, numero5, opcao2);
                 return SistemaDeMedidasCs.ToString();
             }
             else
