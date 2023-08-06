@@ -10,7 +10,7 @@ namespace RetornoDaFuncao
     class OutrasFunções
     {
 
-        public static string number(
+        public static string Number(
             double numero2, 
             int x, 
             string escolha, 
