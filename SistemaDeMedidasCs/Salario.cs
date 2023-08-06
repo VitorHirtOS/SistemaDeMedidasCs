@@ -20,6 +20,9 @@ namespace SistemaDeMedidasCs
             }else if(OpcaoDeGUI == "reajuste")
             {
                 return retorno.Soma.ToString();
+            }else if(OpcaoDeGUI == "id")
+            {
+                return retorno.Id;
             }
             else
             {
@@ -47,11 +50,6 @@ namespace SistemaDeMedidasCs
             Reajuste = reajuste; // Porcentagem de reajuste
             Salario = salario; // Salario atual
             Soma = Salario + Reajuste; // Soma dos valores + o reajuste
-        }
-
-        public double ValorDeAumento()
-        {
-            return Soma;
         }
 
     }

@@ -79,7 +79,7 @@ namespace RetornoDaFuncao
 
 
                 string valores = salarioObj.Retorno(id, nome, reajuste, salario, OpcaoDeGUI);
-                return valores.ToString();
+                return valores;
             }
             else
             {
