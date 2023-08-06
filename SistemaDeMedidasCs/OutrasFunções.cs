@@ -10,10 +10,21 @@ namespace RetornoDaFuncao
     class OutrasFunções
     {
 
-        public static string number(double numero2, int x, string escolha, double numero5, string opcao, string opcao2)
+        public static string number(
+            double numero2, 
+            int x, 
+            string escolha, 
+            double numero5, 
+            string opcao, 
+            string opcao2, 
+            string id, 
+            string nome, 
+            int reajuste,
+            string OpcaoDeGUI,
+            float salario)
         {
 
-            Console.WriteLine("Realizar a raiz quadrada = 1 ou 0 para cálcular a potenciação ou para converter valores de medidas");
+            Console.WriteLine("Realizar a raiz quadrada = 1 ou 0 para cálcular a potenciação ou para converter valores de medidas ou 3 para reajuste");
             escolha = Console.ReadLine();
   
             if(escolha == "1")
@@ -50,6 +61,25 @@ namespace RetornoDaFuncao
 
                 double SistemaDeMedidasCs = SistemaDeMedidas.SistemaMedidas(opcao, opcao2, numero5);
                 return SistemaDeMedidasCs.ToString();
+            }else if (escolha == "3")
+            {
+                Console.WriteLine("Passe o id: ");
+                id = Console.ReadLine();
+                Console.WriteLine("Passe o nome: ");
+                nome = Console.ReadLine();
+                Console.WriteLine("Passe o reajuste: ");
+                reajuste = int.Parse(Console.ReadLine());
+                Console.WriteLine("Passe o sálario: ");
+                salario = float.Parse(Console.ReadLine());
+                Console.WriteLine("Opções de visualização = nome, salario ou reajuste em minúsculo ");
+                OpcaoDeGUI = Console.ReadLine();
+
+                // Criar uma instância de Salario
+                Salario salarioObj = new Salario();
+
+
+                string valores = salarioObj.Retorno(id, nome, reajuste, salario, OpcaoDeGUI);
+                return valores.ToString();
             }
             else
             {
