@@ -71,7 +71,7 @@ namespace RetornoDaFuncao
                 reajuste = int.Parse(Console.ReadLine());
                 Console.WriteLine("Passe o sálario: ");
                 salario = float.Parse(Console.ReadLine());
-                Console.WriteLine("Opções de visualização = nome, salario ou reajuste em minúsculo ");
+                Console.WriteLine("Opções de visualização = nome, salario, reajuste ou id em minúsculo: ");
                 OpcaoDeGUI = Console.ReadLine();
 
                 // Criar uma instância de Salario
