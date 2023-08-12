@@ -1,13 +1,22 @@
 #include <stdio.h>
+#include <math.h>
+#include <locale.h>
+#include <tchar.h>
+#include <string>
+#include "FunctionSystem.h"
 
-int main() {
-	int number[20] = [];
+double ConversaoBitcoin(double valueC) {
 
-	printf(number[0]);
+	printf("Escreva o número para conversão: ");
+	scanf("%lf", &valueC);
 
-	for (int c = 0; c < 10; c++) {
-		numero[] = c;
+	double valueBitcoin = bitcoin(valueC);
 
-	}
+	return 0;
+}
+
+double bitcoin(double valueC) {
+
+	return valueC * 0.001;
 
 }

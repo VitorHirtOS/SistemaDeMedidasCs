@@ -7,4 +7,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Bitcoin.c" />
+    <None Remove="DollarEuro.cpp" />
+    <None Remove="functionsystem.h" />
+    <None Remove="RealBrazil.c" />
+    <None Remove="returnsystem.cpp" />
+  </ItemGroup>
+
 </Project>

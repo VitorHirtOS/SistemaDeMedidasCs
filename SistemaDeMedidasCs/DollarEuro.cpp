@@ -3,7 +3,7 @@
 
 int main() {
 	
-	DollarEuro()
+	DollarEuro();
 	system("PAUSE");
 	return 0;
 

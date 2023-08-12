@@ -7,17 +7,12 @@
 
 class SistemaDeConversaoEuroDollar {
 
-	setlocale(LC_ALL, "portuguese");
-
 	class Conversao {
 
-		public: static void DollarEuro() {
+	public: static void DollarEuro(std::string acao) {
 
 			std::cout << "Sistema de conversão entre moedas americana e europeu: " << std::endl;
 
-			std::string conversao = OpcaoConvert.EscolhaConvert(acao);
-
-			std::cout << conversao << "\n";
 
 		}
 
@@ -31,7 +26,7 @@ class SistemaDeConversaoEuroDollar {
 			std::cout << "Euro -> 'Dollar' ou Dollar -> 'Euro'" << "\n";
 			std::cout << "Escreva em minúsculo dollar ou euro" << "\n";
 
-			std::string acao = "" ;
+			std::string acao = "";
 
 			std::cin >> acao;
 
@@ -52,29 +47,22 @@ class SistemaDeConversaoEuroDollar {
 
 		private: static std::string RetornoOpcao(std::string acao, double moeda) {
 
-			double cambio[100] = { 0.7618 };
+			double cambio = { 0.7618 };
 
-			switch (acao)
-			{
-			case "dollar":
+			if (acao == "dollar") {
 
-				std:: << cambio << "\n";
+				std::cout << cambio << "\n";
 
-				std::printf("O resultado da conversão é = %s", std::to_string(moeda * cambio))
+				std::printf("O resultado da conversão é = %s", std::to_string(moeda * cambio));
+			}
+			else if (acao == "euro") {
 
-				break;
+				std::cout << cambio << "\n";
 
-			case "euro":
+				std::printf("O resultado da conversão é = %s", std::to_string(moeda * cambio));
 
-				std:: << cambio << "\n";
-
-				std::printf("O resultado da conversão é = %s", std::to_string(moeda * cambio))
-
-				break;
-			
-			default:
+			}else{
 				std::cout << "Operação inválida" << std::endl;
-				break;
 			}
 
 			return acao;
